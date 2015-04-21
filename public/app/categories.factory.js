@@ -1,6 +1,7 @@
 (function() {
     angular.module('HighFive').factory('CategoriesFactory', CategoriesFactory);
 
+
     function CategoriesFactory() {
 
     	var factory = {};
@@ -39,7 +40,7 @@
             }
             return tempArray
             
-    };
+        };
     	return factory;
     }
 })();
