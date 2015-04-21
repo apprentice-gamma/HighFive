@@ -1,17 +1,8 @@
-<div class="results">
+<div class="results" ng-controller="SingleCategoryController as single">
 	<h3>Your five restaurants are listed here</h3>
-	<div class="summary info">
-		<h3>{{vmCategoryController.category.title}}</h3>
-		<p>{{vmCategoryController.category.description}}</li>
-	</div>
-	<div class="details info">
-		<p>{{vmCategoryController.category.rating}}</p>
-		<p>{{vmCategoryController.category.distance}}</p>
-		<p>{{vmCategoryController.category.address}}</p>
-		<p>{{vmCategoryController.category.phone}}</p>
-		<p>{{vmCategoryController.category.hours}}</p>
-	</div>
-	<div class="map-pic info">
-		<div id="map"></div>
+	{{single.number}}
+	<div class="summary info" ng-repeat="item in single.currentList">
+		<p>{{item.name}} {{item.rating}}</p>
+		
 	</div>
 </div>
