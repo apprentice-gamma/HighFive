@@ -11,7 +11,7 @@ function SingleCategoryController(CategoriesFactory, $routeParams){
      	vm.categoriesObject = {
      		"pizza":vm.pizzaList,
      		"healthy":vm.healthyList,
-     		"bar":vm.barFoodList,
+     		"bar food":vm.barFoodList,
      		"quick":vm.quickList,
      		"formal":vm.formalList,
      	};
