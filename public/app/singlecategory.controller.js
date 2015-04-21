@@ -22,7 +22,6 @@ function SingleCategoryController(CategoriesFactory, $routeParams){
      		}
      	}
 
-
      	console.log(vm.pizzaList);
         console.log(CategoriesFactory.quickList);
         console.log(vm.currentRoute);
