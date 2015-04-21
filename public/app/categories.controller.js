@@ -1,21 +1,14 @@
 angular.module("HighFive").controller("CategoriesController", CategoriesController); 
-function CategoriesController($http, CategoriesFactory){
+function CategoriesController(CategoriesFactory){
 		var vm = this;
-		vm.quick = "&query=fast+food";
-    	vm.formal = "&query=fine+dining";
-    	vm.pizza = "&query=pizza";
-    	vm.barFood = "&query=bar";
-    	vm.healthy = "&query=healthy";
-    	vm.listData = {};
 
-    	vm.getList = function(category){
-    		CategoriesFactory.getList(category).success(function(data){
-    			vm.listData = data;
-    		});
-    	}
-    	vm.getList(vm.quick);
+        CategoriesFactory.pizzaList = CategoriesFactory.initializeSearch('pizza restaurant');
+        CategoriesFactory.formalList = CategoriesFactory.initializeSearch('fine dining');
+        CategoriesFactory.healthyList = CategoriesFactory.initializeSearch('healthy restuarant');
+        CategoriesFactory.barFoodList = CategoriesFactory.initializeSearch('bar food');
+        CategoriesFactory.quickList = CategoriesFactory.initializeSearch('fast food');
 
-    	vm.service = new google.maps.places.PlacesService(map);
-		vm.service.textSearch(request, callback);
+        console.log(CategoriesFactory.quickList);
+		
 }
 
