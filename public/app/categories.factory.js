@@ -10,7 +10,7 @@
         factory.healthyList = [];
         factory.barFoodList = [];
 
-        factory.initialize = function (googleTextSearch){
+        factory.initializeSearch = function (googleTextSearch){
             var searchLocation = new google.maps.LatLng(42.3353685,-83.04925);
 
             var map = new google.maps.Map(document.getElementById('map'), {
