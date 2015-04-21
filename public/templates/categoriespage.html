@@ -1,7 +1,7 @@
 <div style="categories" ng-controller="CategoriesController as categoriesCtrl">
 	<h3>The Five Main Categories Go Here</h3>
 	<ul>
-		<li style="buton" ng-repeat="category in categoriesCtrl.categories">{{category}}</li>
+		<li style="button" ng-repeat="category in categoriesCtrl.categories" ><a ng-href="#/categories/{{category | lowercase}}">{{category}}</a></li>
 	</ul>
-	{{}}
 </div>
+

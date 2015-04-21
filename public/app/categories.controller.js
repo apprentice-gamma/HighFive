@@ -4,7 +4,7 @@ function CategoriesController(CategoriesFactory){
         vm.categories = ["Pizza", "Healthy", "Bar Food", "Formal", "Quick"];
         CategoriesFactory.pizzaList = CategoriesFactory.initializeSearch('pizza restaurant');
         CategoriesFactory.formalList = CategoriesFactory.initializeSearch('fine dining');
-        CategoriesFactory.healthyList = CategoriesFactory.initializeSearch('healthy restuarant');
+        CategoriesFactory.healthyList = CategoriesFactory.initializeSearch('healthy restaurant');
         CategoriesFactory.barFoodList = CategoriesFactory.initializeSearch('bar food');
         CategoriesFactory.quickList = CategoriesFactory.initializeSearch('fast food');
 
