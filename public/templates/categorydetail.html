@@ -1,8 +1,7 @@
 <div class="results" ng-controller="SingleCategoryController as single">
 	<h3>Your five restaurants are listed here</h3>
 	{{single.number}}
-	<div class="summary info" ng-repeat="item in single.currentList">
+	<div class="summary info" ng-repeat="item in single.currentList | limitTo: 5 : (single.currentList-1) | filter:query | orderBy: '-rating'  ">
 		<p>{{item.name}} {{item.rating}}</p>
-		
 	</div>
 </div>
