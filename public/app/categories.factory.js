@@ -39,7 +39,7 @@
             }
             return tempArray
             
-    },
+    };
     	return factory;
     }
 })();
