@@ -1,8 +1,17 @@
-<!DOCTYPE <html>
-<head>
-	<title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="results">
+	<h3>Your five restaurants are listed here</h3>
+	<div class="summary info">
+		<h3>{{vmCategoryController.category.title}}</h3>
+		<p>{{vmCategoryController.category.description}}</li>
+	</div>
+	<div class="details info">
+		<p>{{vmCategoryController.category.rating}}</p>
+		<p>{{vmCategoryController.category.distance}}</p>
+		<p>{{vmCategoryController.category.address}}</p>
+		<p>{{vmCategoryController.category.phone}}</p>
+		<p>{{vmCategoryController.category.hours}}</p>
+	</div>
+	<div class="map-pic info">
+		<div id="map"></div>
+	</div>
+</div>

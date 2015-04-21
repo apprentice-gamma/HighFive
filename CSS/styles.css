@@ -1,0 +1,15 @@
+.landing {
+	text-align: center;
+}
+.final-location .info {
+	float: left;
+}
+.final-location .summary {
+	width: 304px;
+}
+.final-location .details {
+	width: 304px;
+}
+.final-location .map-pic {
+	width: 146px;
+}
