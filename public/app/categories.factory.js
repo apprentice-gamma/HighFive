@@ -6,11 +6,11 @@
 
         var factory = {};
         factory.categories = ["Pizza", "Healthy", "Bar Food", "Formal", "Quick"];
-        factory.pizzaList = ['pizza'];
-        factory.quickList = ['quick'];
-        factory.formalList = ['formal'];
-        factory.healthyList = ['healthy'];
-        factory.barFoodList = ['bar food'];
+        factory.pizzaList = [];
+        factory.quickList = [];
+        factory.formalList = [];
+        factory.healthyList = [];
+        factory.barFoodList = [];
         factory.dude = 'Dude';
         factory.sayMenu = function (menuArray){
             var msg = new SpeechSynthesisUtterance();
