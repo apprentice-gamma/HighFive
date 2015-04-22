@@ -2,12 +2,37 @@
 <html ng-app="HighFive">
 <head>
 	<title></title>
+	<script>
+	var msg = new SpeechSynthesisUtterance();
+	var voices = window.speechSynthesis.getVoices();
+	msg.voice = voices[10]; // Note: some voices don't support altering params
+	msg.voiceURI = 'native';
+	msg.volume = 1; // 0 to 1
+	msg.rate = 1; // 0.1 to 10
+	msg.pitch = 2; //0 to 2
+	msg.text = 'Hello World';
+	msg.lang = 'en-US';
+
+	msg.onend = function(e) {
+	  console.log('Finished in ' + event.elapsedTime + ' seconds.');
+	};
+
+	window.speechSynthesis.getVoices().forEach(function(voice) {
+		console.log(voice.name, voice.default ? '(default)' :'');
+	});
+
+	var msg = new SpeechSynthesisUtterance('Hello!');
+	msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Whisper'; })[0];
+	//speechSynthesis.speak(msg);
+
+</script>
 </head>
 <body >
 	<div id='map'></div>
 {{1+1}}
 
 	<div ng-view></div>
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
