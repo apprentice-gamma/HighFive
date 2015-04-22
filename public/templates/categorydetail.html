@@ -3,6 +3,6 @@
 	{{single.number}}
 	<div class="summary info" ng-repeat="item in single.currentList|filter:{rating:query, rating:'!undefined'} | orderBy: '-rating'| limitTo:5:(single.currentList-1)  ">
 
-		<p>{{item.name}} {{item.rating}}</p>
+		<p>{{item.name}} {{item.rating}} </p>
 	</div>
 </div>

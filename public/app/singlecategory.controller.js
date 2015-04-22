@@ -1,5 +1,5 @@
 angular.module("HighFive").controller("SingleCategoryController", SingleCategoryController); 
-function SingleCategoryController(CategoriesFactory, $routeParams){
+function SingleCategoryController(CategoriesFactory, $routeParams, DistanceFactory){
 		var vm = this;
      	vm.pizzaList = CategoriesFactory.pizzaList;
      	vm.currentRoute = $routeParams.category;
@@ -7,7 +7,7 @@ function SingleCategoryController(CategoriesFactory, $routeParams){
      	vm.barFoodList = CategoriesFactory.barFoodList;
      	vm.quickList = CategoriesFactory.quickList;
      	vm.formalList = CategoriesFactory.formalList;
-     	vm.number = 8;
+        vm.distanceObject;
      	vm.categoriesObject = {
      		"pizza":vm.pizzaList,
      		"healthy":vm.healthyList,
@@ -21,6 +21,13 @@ function SingleCategoryController(CategoriesFactory, $routeParams){
      			vm.currentList = vm.categoriesObject[category];
      		}
      	}
+
+        vm.getDistance = function(lat, lng){
+            DistanceFactory.getDistance(lat, lng).success(function(data){
+                vm.distanceObject = data;
+                console.log(test);
+            })
+        }
 
      	console.log(vm.pizzaList);
         console.log(CategoriesFactory.quickList);
