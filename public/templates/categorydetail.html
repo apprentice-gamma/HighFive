@@ -1,8 +1,12 @@
-<div class="results" ng-controller="SingleCategoryController as single">
-	<h3>Your five restaurants are listed here</h3>
-	{{single.number}}
-	<div class="summary info" ng-repeat="item in single.currentList|filter:{rating:query, rating:'!undefined'} | orderBy: '-rating'| limitTo:5:(single.currentList-1)  ">
+<h3>Your five restaurants are listed here</h3>
 
-		<p>{{item.name}} {{item.rating}}</p>
-	</div>
+<div class="results" ng-controller="SingleCategoryController as single">
+	
+	<ul>
+		<li class="summary info" ng-repeat="item in single.currentList|filter:{rating:query, rating:'!undefined'} | orderBy: '-rating'| limitTo:5:(single.currentList-1)">
+			<a href="#/categories/{{single.currentRoute | lowercase}}/">
+				<div>{{item.name}} {{item.rating}}</div>
+			</a>
+		</li>
+	</ul>
 </div>

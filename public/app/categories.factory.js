@@ -5,16 +5,16 @@
     function CategoriesFactory() {
 
         var factory = {};
-        factory.pizzaList = [];
-        factory.quickList = [];
-        factory.formalList = [];
-        factory.healthyList = [];
-        factory.barFoodList = [];
+        factory.categories = ["Pizza", "Healthy", "Bar Food", "Formal", "Quick"];
+        factory.pizzaList = ['pizza'];
+        factory.quickList = ['quick'];
+        factory.formalList = ['formal'];
+        factory.healthyList = ['healthy'];
+        factory.barFoodList = ['bar food'];
         factory.dude = 'Dude';
         factory.sayMenu = function (menuArray){
             var msg = new SpeechSynthesisUtterance();
             msg.text = "";
-
              for(var i = 0; i < menuArray.length; i++ ){
                  msg.text += menuArray[i]+". ";
                  console.log(msg.text);

@@ -1,6 +1,7 @@
 angular.module("HighFive").controller("SingleCategoryController", SingleCategoryController); 
 function SingleCategoryController(CategoriesFactory, $routeParams){
 		var vm = this;
+        vm.categories = CategoriesFactory.categories;
      	vm.pizzaList = CategoriesFactory.pizzaList;
      	vm.currentRoute = $routeParams.category;
      	vm.healthyList = CategoriesFactory.healthyList;
