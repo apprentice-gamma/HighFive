@@ -1,4 +1,5 @@
 angular.module("HighFive").controller("CategoriesController", CategoriesController); 
+
 function CategoriesController(CategoriesFactory, DistanceFactory){
 	var vm = this;
     vm.categories = ["Pizza", "Healthy", "Bar Food", "Formal", "Quick"];
