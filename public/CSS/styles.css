@@ -1,5 +1,5 @@
 body {
-	background: #ebb500 url(img/bg-slice.png) 0 0 repeat-x; 
+	background: #ebb500 url(../img/bg-slice.png) 0 0 repeat-x; 
 }
 .main-logo {float: right;}
 .landing {
