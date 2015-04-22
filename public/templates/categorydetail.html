@@ -7,9 +7,9 @@
 			<a href="#/categories/{{single.currentRoute | lowercase}}/{{single.currentList[$index].id}}">
 				{{item.name}}
 			</a>
-			&nbsp;{{item.rating}}
+			&nbsp;Rated{{item.rating}} Stars, {{item.distance.distance.value * 0.00062137 | number:2 }}Miles Away
 
 		</li>
 	</ul>
-
+	
 </div>

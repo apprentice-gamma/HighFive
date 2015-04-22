@@ -11,6 +11,8 @@
         factory.formalList = [];
         factory.healthyList = [];
         factory.barFoodList = [];
+        factory.testLocationLat = 42.3353685;
+        factory.testLocationLng = -83.04925;
         factory.dude = 'Dude';
         factory.sayMenu = function (menuArray){
             var msg = new SpeechSynthesisUtterance();
@@ -21,6 +23,7 @@
              }
             speechSynthesis.speak(msg);
         };
+
 
         factory.initializeSearch = function (googleTextSearch){
             var searchLocation = new google.maps.LatLng(42.3353685,-83.04925);
