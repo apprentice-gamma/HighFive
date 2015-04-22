@@ -22,12 +22,17 @@ function SingleCategoryController(CategoriesFactory, $routeParams, DistanceFacto
      		}
      	}
 
-        vm.getDistance = function(lat, lng){
-            DistanceFactory.getDistance(lat, lng).success(function(data){
-                vm.distanceObject = data;
-                console.log(test);
-            })
+        vm.getDistance = function(list){
+            list.forEach(function(object){
+                var lat = object.geometry.location.k;
+                var lng = object.geometry.location.D;
+
+                DistanceFactory.getDistance(lat, lng);
+            });
+            
         }
+
+        vm.getDistance(vm.currentList);
 
      	console.log(vm.pizzaList);
         console.log(CategoriesFactory.quickList);
