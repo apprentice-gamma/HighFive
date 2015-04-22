@@ -4,7 +4,7 @@
 
     function CategoriesFactory() {
 
-    	var factory = {};
+        var factory = {};
         factory.pizzaList = [];
         factory.quickList = [];
         factory.formalList = [];
@@ -12,6 +12,18 @@
         factory.barFoodList = [];
         factory.testLocationLat = 42.3353685;
         factory.testLocationLng = -83.04925;
+        factory.dude = 'Dude';
+        factory.sayMenu = function (menuArray){
+            var msg = new SpeechSynthesisUtterance();
+            msg.text = "";
+
+             for(var i = 0; i < menuArray.length; i++ ){
+                 msg.text += menuArray[i]+". ";
+                 console.log(msg.text);
+             }
+            speechSynthesis.speak(msg);
+        };
+
 
         factory.initializeSearch = function (googleTextSearch){
             var searchLocation = new google.maps.LatLng(42.3353685,-83.04925);
