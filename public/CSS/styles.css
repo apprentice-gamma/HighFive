@@ -154,6 +154,23 @@ ul .close-button {
   margin-top: 30px;
   display: block;
 }
+ .results li {
+  background-color: gray;
+  width:770px;
+  height: 51px;
+  text-decoration: none;
+  margin-top: 2px;
+  border-radius: 6px;
+  list-style-type: none;
+ }
+ .results li a{
+  text-decoration: none;
+  list-style-type: none;
+ }
+
+ .result ul{
+  padding: 0px;
+ }
 /*loader css*/
 .loader {
   font-size: 8px;

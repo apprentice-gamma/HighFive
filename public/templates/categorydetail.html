@@ -1,8 +1,9 @@
+<div class="category-detail-header">
 <ul class="button-nav">
 	<li><a href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a></li> 
 	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></ul></li>
 <h3>Your five restaurants are listed here</h3>
-
+</div>
 <div class="results" ng-controller="SingleCategoryController as single">
 	<ul>
 		<li class="summary info" ng-repeat="item in single.currentList|filter:{rating:query, rating:'!undefined'} | orderBy: '-rating'| limitTo:5:(single.currentList-1)">
