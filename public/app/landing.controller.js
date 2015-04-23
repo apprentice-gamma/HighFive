@@ -16,7 +16,7 @@
 
     	$timeout(function(){
     		$location.path("/categories")
-    	}, 5000);
+    	}, 3000);
 	}
 
 })();
