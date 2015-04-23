@@ -12,8 +12,6 @@ function CategoriesController(CategoriesFactory, DistanceFactory){
                 DistanceFactory.getDistance(lat, lng).then(function(data){
                     object.distance = data;
                 });
-
-
                 // object.distance = returnedDistanceArray[0].distance.text;
                 // console.log(object.distance, "TEST!!!!!!!!!!!");
             });

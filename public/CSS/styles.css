@@ -14,6 +14,12 @@ body {
 	-webkit-box-shadow: 0 0 40px 10px #000;
 	box-shadow:         0 0 40px 10px #000;
 }
+.close-button {
+	width: 5%;
+	height: 5%;
+	padding-left: 95%;
+	margin-bottom: -18px;
+}
 .back-image {
 	width: 5%;
 	height: 5%;
