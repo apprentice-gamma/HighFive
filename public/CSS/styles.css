@@ -14,12 +14,25 @@ body {
 	-webkit-box-shadow: 0 0 40px 10px #000;
 	box-shadow:         0 0 40px 10px #000;
 	position: relative;
+  font-family: "Helvetica Neue";
 }
-.main-logo {
-	float: center;
-	width: 60%;
-	height: 60%;
-	padding-top: 50px;
+.large-address {
+  font-family: "Helvetica Neue Condensed";
+  font-weight: bold;
+  font-size: 25px;
+}
+.landing-main-logo {
+  width: 10%;
+  height: 10%;
+  padding-top: 25px;
+}
+.cat-main-logo {
+	position: relative;
+  top: -8px;
+  left: 347px;
+	width: 10%;
+	height: 10%;
+	padding-top: 25px;
 }
 .landing {
 	text-align: center;
@@ -43,7 +56,7 @@ body {
 	border-radius: 10px;
 	position: relative;
 	top: 110px;
-  	left: 448px;
+  left: 448px;
 	border: 1px solid rgba(255, 255, 255, .1);
 }
 #dash-words {

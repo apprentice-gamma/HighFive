@@ -1,6 +1,8 @@
 <div class="landing" ng-controller="LandingController as landing">
-	<img class="main-logo" ng-src="img/highfive-logo-github.png">
-	<p>Finding your HighFive near {{landing.currentAddress}}</p>
+	<img class="landing-main-logo" ng-src="img/highfive-app-logo-sm.png">
+	<p>Finding your HighFive near</p>
+	<span class="large-address">{{landing.currentAddress}}</span>
+
 	<h1>{{vmCategoryController.location}}</h1>
 	<span class="timer">{{vmCategoryController.timer}}</span>
 	<div class='loader'></div>
