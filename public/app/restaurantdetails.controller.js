@@ -18,15 +18,11 @@ function RestaurantDetailsController(CategoriesFactory, $routeParams){
      		"formal":vm.formalList,
      	};
 
-    for (var category in vm.categoriesObject){
-    	if (vm.currentRoute == category){
-    		vm.categoriesObject[category].forEach(function(placesObject){
-    			if (vm.currentId == placesObject.places_id)
-    				console.log(placesObject);
-    				vm.currentPlace = placesObject;
-    		});
-    	};
-    };
+ 	vm.categoriesObject[vm.currentRoute].forEach(function(object){
+ 		if (object.place_id === vm.currentId){
+ 			vm.currentPlace = object;
+ 		}
+ 	})
 	vm.test = "I'm the restuarant you want!";
 	console.log('I\'m the restuarant you want!');
 	console.log(vm.currentPlace);	
