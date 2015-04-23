@@ -21,6 +21,10 @@ body {
   margin-top: 55px;
 
 }
+h3 {
+  font-family: "Helvetica Neue";
+  
+}
 .large-address {
   font-family: 'Oswald';
   font-weight: bold;

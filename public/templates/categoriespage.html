@@ -3,7 +3,7 @@
 	<a href="#/"><img class='close-button' src="../img/close-x.png"></a>
 </div>
 <div style="categories" ng-controller="CategoriesController as categoriesCtrl">
-	<h3>The Five Main Categories Go Here</h3>
+	<h3>Here's your HighFive...</h3>
 	<ul>
 		<li class="button" style="button" ng-repeat="category in categoriesCtrl.categories" ><a ng-href="#/categories/{{category | lowercase}}">{{category}}</a></li>
 	</ul>
