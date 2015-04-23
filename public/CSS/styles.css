@@ -145,7 +145,15 @@ ul .close-button {
 	margin-bottom: 0;
 	float: right;
 }
-
+.speech-test {
+  
+  float: right;
+  margin: auto;
+  width: 70px;
+  font-size: 15px;
+  margin-top: 30px;
+  display: block;
+}
 /*loader css*/
 .loader {
   font-size: 8px;
