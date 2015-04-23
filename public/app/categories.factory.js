@@ -2,9 +2,10 @@
     angular.module('HighFive').factory('CategoriesFactory', CategoriesFactory);
 
 
-    function CategoriesFactory() {
+    function CategoriesFactory($http) {
 
         var factory = {};
+        factory.currentAddress = ''
         factory.categories = ["Pizza", "Healthy", "Bar Food", "Formal", "Quick"];
         factory.pizzaList = [];
         factory.quickList = [];
@@ -24,7 +25,13 @@
             speechSynthesis.speak(msg);
         };
 
+        factory.findAddress = function(lat, lng){
+            var url = "http://maps.googleapis.com/maps/api/geocode/json?latlng=";
+            $http.get(url + lat + ',' + lng + '&sensor=true').success(function(data){
+                factory.currentAddress = data.results[0].formatted_address;
+            })
 
+        }
         factory.initializeSearch = function (googleTextSearch){
             var searchLocation = new google.maps.LatLng(42.3353685,-83.04925);
 
@@ -44,6 +51,7 @@
 
             var tempArray = [];
             function callback(results, status) {
+                console.log(status);
               if (status == google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
                     tempArray.push(results[i]);

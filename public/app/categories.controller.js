@@ -18,9 +18,6 @@ function CategoriesController(CategoriesFactory, DistanceFactory){
             
         }
 
-
-   
-
         vm.getDistance(CategoriesFactory.pizzaList);
         vm.getDistance(CategoriesFactory.healthyList);
         vm.getDistance(CategoriesFactory.barFoodList);

@@ -14,6 +14,23 @@ body {
 	-webkit-box-shadow: 0 0 40px 10px #000;
 	box-shadow:         0 0 40px 10px #000;
 }
+
+#dash-logo {
+	width: 61px;
+	height: 61px;
+	border-radius: 10px;
+	position: fixed;
+	top: 180px;
+	left: 552px;
+	border: 1px solid rgba(255, 255, 255, .1);
+}
+#dash {
+	width: 800px;
+	height: 380px;
+	background: #ebb500 url(../img/dash.jpg); 
+	background-position: center;
+	background-repeat: no-repeat;
+}
 .close-button {
 	width: 5%;
 	height: 5%;

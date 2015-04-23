@@ -36,9 +36,7 @@
                         }
                       }
                         // console.log(object.distance);
-                       deferred.resolve(results[0]);
-                        
-                        
+                       deferred.resolve(results[0]);     
                     }
                     return deferred.promise;
 

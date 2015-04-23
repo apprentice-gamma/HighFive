@@ -5,6 +5,9 @@
 	function RouteConfiguration($routeProvider){
 		$routeProvider
 		.when('/', {
+			templateUrl: 'templates/dash.html',
+		})
+		.when('/landing', {
 			templateUrl: 'templates/landingpage.html',
 		})
 		.when('/categories', {
