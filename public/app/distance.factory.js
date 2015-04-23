@@ -40,7 +40,24 @@
                     }
                     return deferred.promise;
 
-        }
+        };
+        factory.getPlaceDetails = function (id){
+        var map = new google.maps.Map(document.getElementById('map'));
+
+        var request = {
+          placeId: id
+        };
+
+        var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        var deferred = $q.defer();
+        service.getDetails(request, function(place, status) {
+          if (status == google.maps.places.PlacesServiceStatus.OK) {
+            deferred.resolve(place);
+          }      
+      });
+       return deferred.promise;
+  }
     
     	return factory;
     }
