@@ -23,9 +23,6 @@ function SingleCategoryController(CategoriesFactory, $routeParams, DistanceFacto
      			vm.currentList = vm.categoriesObject[category];
      		}
      	}
-        vm.setData = function(input, obj){
-            obj.distance = input;
-        }
    
         console.log(vm.currentRoute);
         console.log(vm.currentList);
