@@ -1,5 +1,5 @@
 angular.module('HighFive').controller('RestaurantDetailsController', RestaurantDetailsController);
-function RestaurantDetailsController(CategoriesFactory, $routeParams){
+function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeParams){
 	var vm = this;
 	vm.details = {}
 	vm.currentPlace = {};
@@ -24,12 +24,15 @@ function RestaurantDetailsController(CategoriesFactory, $routeParams){
  			vm.currentPlace = object;
  		}
  	});
- 	TestFactory.getPlaceDetails(vm.currentPlact.place_id).then(function(data){
+ 	DistanceFactory.getPlaceDetails(vm.currentId).then(function(data){
 			vm.details = data;
+			CategoriesFactory.speak("Thoughts from a customer." + "-" + vm.details.reviews[0].text);
 		});
 	vm.test = "I'm the restuarant you want!";
 	console.log('I\'m the restuarant you want!');
-	console.log(vm.currentPlace);	
+	console.log(vm.currentPlace);
 	console.log(vm.details);
+	CategoriesFactory.speak("testing");
+	
 
 }

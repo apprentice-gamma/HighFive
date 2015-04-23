@@ -15,13 +15,10 @@
         factory.testLocationLat = 42.3353685;
         factory.testLocationLng = -83.04925;
         factory.dude = 'Dude';
-        factory.sayMenu = function (menuArray){
+        factory.speak = function (text){
             var msg = new SpeechSynthesisUtterance();
-            msg.text = "";
-            for(var i = 0; i < menuArray.length; i++ ){
-                msg.text += menuArray[i]+". ";
-                console.log(msg.text);
-            }
+            msg.text = text;
+            msg.rate = 1;
             speechSynthesis.speak(msg);
         };
 
