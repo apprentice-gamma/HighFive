@@ -27,9 +27,7 @@
 
         factory.findAddress = function(lat, lng){
             var url = "http://maps.googleapis.com/maps/api/geocode/json?latlng=";
-            $http.get(url + lat + ',' + lng + '&sensor=true').success(function(data){
-                factory.currentAddress = data.results[0].formatted_address;
-            })
+            return $http.get(url + lat + ',' + lng + '&sensor=true');
 
         }
         factory.initializeSearch = function (googleTextSearch){
