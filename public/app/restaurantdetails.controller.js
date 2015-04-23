@@ -9,5 +9,5 @@ function RestaurantDetailsController(CategoriesFactory, $routeParams){
  	vm.quickList = CategoriesFactory.quickList;
  	vm.formalList = CategoriesFactory.formalList;
 	console.log('I\'m the restuarant you want!');
-	for(currentRoute){}
+	//for(currentRoute){}
 }
