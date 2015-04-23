@@ -14,9 +14,9 @@
     		vm.currentAddress = data.results[0].formatted_address;
     	});
 
-    	 // $timeout(function(){
-    	 //   $location.path("/categories")
-    	 // }, 5000);
+    	 $timeout(function(){
+    	   $location.path("/categories")
+    	 }, 3000);
 	}
 
 })();

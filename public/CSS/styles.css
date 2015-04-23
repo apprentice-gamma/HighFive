@@ -16,10 +16,16 @@ body {
 	position: relative;
   font-family: "Helvetica Neue";
 }
+.body-landing-text {
+  font-size: 20px;
+  margin-top: 55px;
+
+}
 .large-address {
-  font-family: "Helvetica Neue Condensed";
+  font-family: 'Oswald';
   font-weight: bold;
-  font-size: 25px;
+  font-size: 35px;
+  margin-bottom: 50px;
 }
 .landing-main-logo {
   width: 10%;
@@ -90,6 +96,30 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.button {
+  display: inline;
+   -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: 'Oswald';
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+  background: #4f5457;
+  padding: 10px 30px 10px 30px;
+  border: solid #dae2e6 1px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.button a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+.button:hover {
+  background: #a9b4ba;
+  text-decoration: none;
 }
 .button-nav li {
 	display: inline;
