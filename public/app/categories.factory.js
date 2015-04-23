@@ -18,10 +18,10 @@
         factory.sayMenu = function (menuArray){
             var msg = new SpeechSynthesisUtterance();
             msg.text = "";
-             for(var i = 0; i < menuArray.length; i++ ){
-                 msg.text += menuArray[i]+". ";
-                 console.log(msg.text);
-             }
+            for(var i = 0; i < menuArray.length; i++ ){
+                msg.text += menuArray[i]+". ";
+                console.log(msg.text);
+            }
             speechSynthesis.speak(msg);
         };
 
@@ -48,6 +48,7 @@
             service.textSearch(request, callback);
 
             var tempArray = [];
+            
             function callback(results, status) {
                 console.log(status);
               if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -59,7 +60,6 @@
               }
             }
             return tempArray
-            
         };
     	return factory;
     }
