@@ -13,6 +13,7 @@ body {
 	-moz-box-shadow:    0 0 40px 10px #000;
 	-webkit-box-shadow: 0 0 40px 10px #000;
 	box-shadow:         0 0 40px 10px #000;
+	position: relative;
 }
 .main-logo {
 	float: center;
@@ -37,19 +38,27 @@ body {
 }
 
 #dash-logo {
-	width: 61px;
-	height: 61px;
+	width: 71px;
+	height: 71px;
 	border-radius: 10px;
-	position: fixed;
-	top: 180px;
-	left: 552px;
+	position: relative;
+	top: 110px;
+  	left: 448px;
 	border: 1px solid rgba(255, 255, 255, .1);
+}
+#dash-words {
+	width: 89px;
+	height: 16px;
+	border-radius: 10px;
+	position: relative;
+	top: 125px;
+	left: 367px;
 }
 #dash {
 	width: 800px;
 	height: 380px;
-	background: #ebb500 url(../img/dash.jpg); 
-	background-position: center;
+	background: #ebb500 url(../img/Dashpic.jpg); 
+	background-position: -193px -99px;
 	background-repeat: no-repeat;
 }
 .close-button {
