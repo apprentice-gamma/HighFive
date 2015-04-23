@@ -1,9 +1,10 @@
 <div>
-	<img class="cat-main-logo" ng-src="img/highfive-app-logo-sm.png">
 	<a href="#/"><img class='close-button' src="../img/close-x.png"></a>
+	<img class="cat-main-logo" ng-src="img/highfive-app-logo-sm.png">
 </div>
-<div style="categories" ng-controller="CategoriesController as categoriesCtrl">
-	<h3>Here's your HighFive...</h3>
+
+<div class="categories" ng-controller="CategoriesController as categoriesCtrl">
+	<h3 class="large-address">Here are the HighFive categories...</h3>
 	<ul>
 		<li class="button" style="button" ng-repeat="category in categoriesCtrl.categories" ><a ng-href="#/categories/{{category | lowercase}}">{{category}}</a></li>
 	</ul>
