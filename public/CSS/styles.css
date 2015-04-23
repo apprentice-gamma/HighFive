@@ -13,12 +13,36 @@ body {
 	-moz-box-shadow:    0 0 40px 10px #000;
 	-webkit-box-shadow: 0 0 40px 10px #000;
 	box-shadow:         0 0 40px 10px #000;
+	position: relative;
+  font-family: "Helvetica Neue";
 }
-.main-logo {
-	float: center;
-	width: 60%;
-	height: 60%;
-	padding-top: 50px;
+.body-landing-text {
+  font-size: 20px;
+  margin-top: 55px;
+
+}
+h3 {
+  font-family: "Helvetica Neue";
+  
+}
+.large-address {
+  font-family: 'Oswald';
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.landing-main-logo {
+  width: 10%;
+  height: 10%;
+  padding-top: 25px;
+}
+.cat-main-logo {
+	position: relative;
+  top: -8px;
+  left: 347px;
+	width: 10%;
+	height: 10%;
+	padding-top: 25px;
 }
 .landing {
 	text-align: center;
@@ -37,19 +61,27 @@ body {
 }
 
 #dash-logo {
-	width: 61px;
-	height: 61px;
+	width: 71px;
+	height: 71px;
 	border-radius: 10px;
-	position: fixed;
-	top: 180px;
-	left: 552px;
+	position: relative;
+	top: 110px;
+  left: 448px;
 	border: 1px solid rgba(255, 255, 255, .1);
+}
+#dash-words {
+	width: 89px;
+	height: 16px;
+	border-radius: 10px;
+	position: relative;
+	top: 125px;
+	left: 367px;
 }
 #dash {
 	width: 800px;
 	height: 380px;
-	background: #ebb500 url(../img/dash.jpg); 
-	background-position: center;
+	background: #ebb500 url(../img/Dashpic.jpg); 
+	background-position: -193px -99px;
 	background-repeat: no-repeat;
 }
 .close-button {
@@ -68,6 +100,30 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.button {
+  display: inline;
+   -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: 'Oswald';
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+  background: #4f5457;
+  padding: 10px 30px 10px 30px;
+  border: solid #dae2e6 1px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.button a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+.button:hover {
+  background: #a9b4ba;
+  text-decoration: none;
 }
 .button-nav li {
 	display: inline;

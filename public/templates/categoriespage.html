@@ -1,9 +1,12 @@
-<a href="#/"><img class='close-button' src="../img/close-x.png"></a>
+<div>
+	<img class="cat-main-logo" ng-src="img/highfive-app-logo-sm.png">
+	<a href="#/"><img class='close-button' src="../img/close-x.png"></a>
+</div>
 <div style="categories" ng-controller="CategoriesController as categoriesCtrl">
-	<h3>The Five Main Categories Go Here</h3>
+	<h3>Here's your HighFive...</h3>
 	<ul>
-		<li style="button" ng-repeat="category in categoriesCtrl.categories" ><a ng-href="#/categories/{{category | lowercase}}">{{category}}</a></li>
+		<li class="button" style="button" ng-repeat="category in categoriesCtrl.categories" ><a ng-href="#/categories/{{category | lowercase}}">{{category}}</a></li>
 	</ul>
-	<a href="" ng-click="categoriesCtrl.speech(categoriesCtrl.categories)">Click me</a>
+	<!-- <a href="" ng-click="categoriesCtrl.speech(categoriesCtrl.categories)">Click me</a> -->
 </div>
 
