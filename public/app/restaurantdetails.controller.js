@@ -1,6 +1,7 @@
 angular.module('HighFive').controller('RestaurantDetailsController', RestaurantDetailsController);
 function RestaurantDetailsController(CategoriesFactory, $routeParams){
 	var vm = this;
+
 	vm.currentPlace = {};
 	vm.categories = CategoriesFactory.categories;
  	vm.pizzaList = CategoriesFactory.pizzaList;
@@ -26,4 +27,5 @@ function RestaurantDetailsController(CategoriesFactory, $routeParams){
 	vm.test = "I'm the restuarant you want!";
 	console.log('I\'m the restuarant you want!');
 	console.log(vm.currentPlace);	
+
 }

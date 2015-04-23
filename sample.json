@@ -1,0 +1,24 @@
+{
+"formatted_address":"553 Monroe Avenue, Detroit, MI 48226, United States",
+"geometry":{
+	"location":{"k":42.335433,"D":-83.04162300000002}
+	},
+"icon":"http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+"id":"74db0d6a700838200161407eb702035b8f1d912b",
+"name":"Pizzapapalis Taverna",
+"opening_hours":{
+	"open_now":true,
+	"weekday_text":[]
+	},
+"photos":[{"height":512,"html_attributions":[],"width":512}],
+"place_id":"ChIJI5MnASwtO4gRhWAow_7rwiM",
+"price_level":1,
+"rating":4.2,
+"reference":"CnRnAAAAI9xDLMbWa4owRshKmx7iBgW33JnJ8suJHgl-4lh8U4IGsAynmaurQLCW9xHomxr1wQsegzfWRTHQYvNti6PWB-rXBfl43ShOTiF5iMyvb-mJREosq-JCYy9ClYJzkdCIzLh3yAHtvDSpEepwGyQqnBIQa3OtAD9ABTMTE-8BbS1FSBoUYgilE0uliJ0L1lkuXjRW8XQBBnk",
+"types":["restaurant","bar","food","establishment"],
+"html_attributions":[],
+"distance":{
+	"distance":{"text":"0.9 km","value":943},
+	"duration":{"text":"5 mins","value":286},
+	"status":"OK"}
+}

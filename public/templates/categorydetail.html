@@ -4,15 +4,14 @@
 <h3>Your five restaurants are listed here</h3>
 
 <div class="results" ng-controller="SingleCategoryController as single">
-	
 	<ul>
 		<li class="summary info" ng-repeat="item in single.currentList|filter:{rating:query, rating:'!undefined'} | orderBy: '-rating'| limitTo:5:(single.currentList-1)">
+			
 			<a href="#/categories/{{single.currentRoute | lowercase}}/{{item.place_id}}">
-				{{item.name}} {{item.place_id}}
+				{{item.name}}
 			</a>
 			&nbsp;Rated{{item.rating}} Stars, {{item.distance.distance.value * 0.00062137 | number:2 }}Miles Away
 
 		</li>
 	</ul>
-	
 </div>
