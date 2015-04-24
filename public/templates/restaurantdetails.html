@@ -8,7 +8,7 @@
 	<div class="restaurant-results">
 		<div class="results-left">
 			<h3>{{restaurant.details.name}}</h3>
-			{{restaurant.currentReview | limitTo: 230}}...
+			<p>{{restaurant.currentReview | limitTo: 230}}...</p>
 		</div>
 		<div class="restaurant-details">
 			<span class="star">{{restaurant.currentPlace.rating}}</span>
@@ -16,7 +16,7 @@
 			<p>{{restaurant.currentPlace.formatted_address}}</p>
 			<p>{{restaurant.details.formatted_phone_number}}</p>
 			<p ng-show="restaurant.details.opening_hours.open_now == true">Open Now</p>
-			<a class="speak-review" href="" ng-click="restaurant.speakReview()">Hear this review</a>
+			<a class="speak-review" href="" ng-click="restaurant.speakReview()"></a>
 		</div>
 		<div class="results-right">
 			<img class="map" ng-src="{{restaurant.map}}">
