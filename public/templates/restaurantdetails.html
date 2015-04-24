@@ -1,26 +1,28 @@
-<div class="category-detail-header">
-<ul class="button-nav">
-	<li><a href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a></li>
-	<li><h3>{{single.currentRoute | uppercase}}</h3></li>
-	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></li>
-</ul>
-</div>
-<div class="restaurant-results" ng-controller="RestaurantDetailsController as restaurant">
-	<div class="results-left">
-		<h3>{{restaurant.details.name}}</h3>
-		{{restaurant.currentReview | limitTo: 230}}...
+
+<div ng-controller="RestaurantDetailsController as restaurant">
+	<div class="detail-header">
+	<h3>{{restaurant.currentRoute | uppercase}}</h3>
+	<a class="nav-button back" href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a>
+	<a class="nav-button close"href="#/"><img class='close-button' src="../img/close-x.png"></a>
 	</div>
-	<div class="restaurant-details">
-		<p>{{restaurant.currentPlace.rating}}</p>
-		<p>{{restaurant.currentPlace.formatted_address}}</p>
-		<p>{{restaurant.details.formatted_phone_number}}</p>
-		<p ng-show="restaurant.details.opening_hours.open_now == true">Open Now</p>
-		<a class="button" href="" ng-click="restaurant.speakReview()">Hear this review</a>
+	<div class="restaurant-results">
+		<div class="results-left">
+			<h3>{{restaurant.details.name}}</h3>
+			{{restaurant.currentReview | limitTo: 230}}...
+		</div>
+		<div class="restaurant-details">
+			<span class="star">{{restaurant.currentPlace.rating}}</span>
+			<span class="shield">{{restaurant.currentPlace.distance.distance.value * 0.00062137 | number:2 }} Miles</span>
+			<p>{{restaurant.currentPlace.formatted_address}}</p>
+			<p>{{restaurant.details.formatted_phone_number}}</p>
+			<p ng-show="restaurant.details.opening_hours.open_now == true">Open Now</p>
+			<a class="speak-review" href="" ng-click="restaurant.speakReview()">Hear this review</a>
+		</div>
+		<div class="results-right">
+			<img class="map" ng-src="{{restaurant.map}}">
+		</div>
+		<div class="container"></div>
 	</div>
-	<div class="results-right">
-		<img class="map" ng-src="{{restaurant.map}}">
-	</div>
-	<div class="container"></div>
 </div>
 	
 
