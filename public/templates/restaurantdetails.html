@@ -1,10 +1,10 @@
-
-<div class="restaurant-results" ng-controller="RestaurantDetailsController as restaurant">
-	<ul class="button-nav">
+<ul class="button-nav">
 	<li><a href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a></li> 
-	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></ul></li>
-	<h3>{{restaurant.currentPlace.name}}</h3>
+	<li>Category Placeholder</li>
+	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></li></ul>
+<div class="restaurant-results" ng-controller="RestaurantDetailsController as restaurant">
 	<div class="results-left">
+		<h3>{{restaurant.currentPlace.name}}</h3>
 		<p>{{restaurant.currentPlace.formatted_address}}</p>
 		<p>{{restaurant.details.formatted_phone_number}}</p>
 		<p>{{restaurant.currentPlace.rating}}</p>
@@ -13,6 +13,7 @@
 	<div class="results-right">
 		<img class="map" ng-src="{{restaurant.map}}">
 	</div>
+	<div class="container"></div>
 </div>
 	
 
