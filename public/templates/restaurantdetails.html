@@ -11,12 +11,12 @@
 			{{restaurant.currentReview | limitTo: 230}}...
 		</div>
 		<div class="restaurant-details">
-			<span class="star">{{restaurant.currentPlace.rating}}</span>
-			<span class="shield">{{restaurant.currentPlace.distance.distance.value * 0.00062137 | number:2 }} Miles</span>
+			<!-- <span class="star">{{restaurant.currentPlace.rating}}</span>
+			<span class="shield">{{restaurant.currentPlace.distance.distance.value * 0.00062137 | number:2 }} Miles</span> -->
 			<p>{{restaurant.currentPlace.formatted_address}}</p>
 			<p>{{restaurant.details.formatted_phone_number}}</p>
 			<p ng-show="restaurant.details.opening_hours.open_now == true">Open Now</p>
-			<a class="speak-review" href="" ng-click="restaurant.speakReview()">Hear this review</a>
+			<a class="speak-review" href="" ng-click="restaurant.speakReview()"></a>
 		</div>
 		<div class="results-right">
 			<img class="map" ng-src="{{restaurant.map}}">

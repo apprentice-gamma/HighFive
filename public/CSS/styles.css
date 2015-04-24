@@ -268,7 +268,10 @@ ul .close-button {
  .speak-review {
   display: block;
   width: 145px;
-  background: transparent url(../img/spoken.png) 0 0 no-repeat; 
+  background: #222 url(../img/spoken.png) 0 0 no-repeat; 
+  width: 130px;
+  height: 85px;
+  background-size: 85px 85px;
  }
 /*loader css*/
 .loader {
