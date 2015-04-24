@@ -21,7 +21,8 @@ body {
   margin-top: 55px;
 }
 .results-left {
-  display: inline-block;
+  /*display: inline-block;*/
+  float: left;
   width: 300px;
   padding: 0 15px;
   height: 324px;
@@ -30,19 +31,23 @@ body {
   line-height: 27px;
 }
 .restaurant-details {
-  display: inline-block;
+ /* display: inline-block;*/
+  float: left;
   height: 324px;
   width: 145px;
   color: #fff;
+  padding-top: 15px;
 }
 .results-right {
-  display: inline-block;
+  /*display: inline-block;*/
   float: right;
   padding: 10px;
-  text-align: center;
   width: 300px;
   height: 324px;
-  overflow: hidden;
+}
+.results-right:after {
+  content: '';
+  clear: both;
 }
 .results {
   font-family: "Oswald";
@@ -226,7 +231,7 @@ ul .close-button {
  }
  .shield {
   margin-right: .5em;
-  margin-left: 40px;
+  margin-left: 33px;
   position: relative;
  }
  .shield:after {
@@ -239,8 +244,7 @@ ul .close-button {
   left: -35px;
  }
 .star {
-  margin-right: .5em;
-  margin-left: 40px;
+  margin: 0 .5em 15px 33px;
   position: relative;
 }
 .star:after{
@@ -267,8 +271,12 @@ ul .close-button {
  }
  .speak-review {
   display: block;
+  border-radius: 5px;
   width: 145px;
-  background: transparent url(../img/spoken.png) 0 0 no-repeat; 
+  background: #222 url(../img/spoken.png) 0 0 no-repeat; 
+  width: 130px;
+  height: 55px;
+  background-size: 65px 65px;
  }
 /*loader css*/
 .loader {
