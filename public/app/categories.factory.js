@@ -16,8 +16,8 @@
         factory.healthyList = [];
         factory.barFoodList = [];
         factory.detroitLabsLat = 
-        factory.testLocationLat = northvilleLat;
-        factory.testLocationLng = northvilleLng;
+        factory.testLocationLat = detroitLabsLat;
+        factory.testLocationLng = detroitLabsLng;
         factory.dude = 'Dude';
         factory.speak = function (text){
             var msg = new SpeechSynthesisUtterance();
