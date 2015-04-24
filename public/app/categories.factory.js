@@ -3,7 +3,10 @@
 
 
     function CategoriesFactory($http) {
-
+        var detroitLabsLat = 42.3353685;
+        var detroitLabsLng = -83.04925;
+        var northvilleLat = 42.4269282;
+        var northvilleLng = -83.4694949;
         var factory = {};
         factory.currentAddress = ''
         factory.categories = ["Pizza", "Healthy", "Bar Food", "Formal", "Quick"];
@@ -12,8 +15,9 @@
         factory.formalList = [];
         factory.healthyList = [];
         factory.barFoodList = [];
-        factory.testLocationLat = 42.3353685;
-        factory.testLocationLng = -83.04925;
+        factory.detroitLabsLat = 
+        factory.testLocationLat = detroitLabsLat;
+        factory.testLocationLng = detroitLabsLng;
         factory.dude = 'Dude';
         factory.speak = function (text){
             var msg = new SpeechSynthesisUtterance();
@@ -28,7 +32,7 @@
 
         }
         factory.initializeSearch = function (googleTextSearch){
-            var searchLocation = new google.maps.LatLng(42.3353685,-83.04925);
+            var searchLocation = new google.maps.LatLng(factory.testLocationLat, factory.testLocationLng);
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: searchLocation,

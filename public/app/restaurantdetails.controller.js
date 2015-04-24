@@ -4,6 +4,7 @@ function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeP
 	vm.location = '';
 	vm.details = {}
 	vm.currentPlace = {};
+	vm.currentReview = '';
 	vm.categories = CategoriesFactory.categories;
  	vm.pizzaList = CategoriesFactory.pizzaList;
  	vm.currentRoute = $routeParams.category;
@@ -28,7 +29,14 @@ function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeP
  	});
  	DistanceFactory.getPlaceDetails(vm.currentId).then(function(data){
 			vm.details = data;
-			CategoriesFactory.speak("Thoughts from a customer." + "-" + vm.details.reviews[0].text);
+			for (var i = 0; i < vm.details.reviews.length; i++){
+				if (Number(vm.details.reviews[i].rating) >= 4) {
+					vm.currentReview = vm.details.reviews[i].text;
+					console.log(vm.currentReview)
+					return CategoriesFactory.speak("Thoughts from a customer." + "-" + vm.details.reviews[i].text);
+				}
+			}
+			
 		});
  	vm.map = DistanceFactory.getStaticMap(vm.location);
 	vm.test = "I'm the restuarant you want!";
