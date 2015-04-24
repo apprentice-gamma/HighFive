@@ -24,7 +24,8 @@ body {
 .results-left {
   display: inline-block;
   width: 40%;
-  padding-left: 30px;
+  padding-left: 10px;
+  overflow: hidden;
 }
 
 .results-left p {
@@ -36,10 +37,14 @@ body {
   padding-right: 30px;
   text-align: center;
   width: 40%;
+  overflow: hidden;
 }
-
+.container {
+  clear:both;
+}
 .map {
   width: 100%;
+  padding:8px;
 }
 
 h3 {
@@ -134,7 +139,7 @@ h3 {
   font-family: 'Oswald';
   color: #ffffff;
   font-size: 20px;
-  background: #4f5457;
+  background: #444;
   padding: 10px 30px 10px 30px;
   border: solid #dae2e6 1px;
   text-decoration: none;
@@ -175,6 +180,31 @@ ul .close-button {
   margin-top: 30px;
   display: block;
 }
+ .results li {
+  background-color: #444;
+  width: 800px;
+  height: 51px;
+  text-decoration: none;
+  margin-top: 2px;
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-size: 22px;
+  font-color: white;
+ }
+ .results li a{
+  text-decoration: none;
+  list-style-type: none;
+  padding-right: 0px;
+ }
+
+ .results ul{
+  padding: 0px;
+ }
+
+ .restaurant-results {
+  background-color: #444;
+  height: 320px;
+ }
 /*loader css*/
 .loader {
   font-size: 8px;
