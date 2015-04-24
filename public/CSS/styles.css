@@ -20,7 +20,6 @@ body {
   font-size: 24px;
   margin-top: 55px;
 }
-
 .results-left {
   display: inline-block;
   width: 300px;
@@ -28,11 +27,13 @@ body {
   height: 324px;
   font-size: 21px;
   color: white;
+  line-height: 27px;
 }
 .restaurant-details {
   display: inline-block;
   height: 324px;
   width: 145px;
+  color: #fff;
 }
 .results-right {
   display: inline-block;
@@ -42,6 +43,11 @@ body {
   width: 300px;
   height: 324px;
   overflow: hidden;
+}
+.results {
+  font-family: "Oswald";
+  font-size: 20px;
+  color: white;
 }
 .restaurant-results h3 {
   text-align: left;
@@ -124,30 +130,28 @@ h3 {
   height: 44px;
   padding-left: 0;
   margin-top: 0;
-  display: inline;
-  position: relative;
-  float:right;
 }
 .back-image {
 	width: 36px;
 	height: 36px;
-	padding-top: 5px;
-	padding-left: 5px;
 }
-.button-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 56px;
-}
-.button-nav h3 {
-  display: inline;
+.detail-header {
   position: relative;
-  left: 290px;
-  bottom: 6px;
 }
-.button-nav li {
-  display: inline;
+.detail-header h3 {
+  margin: 0;
+  line-height: 56px;
+}
+.nav-button {
+  position: absolute;
+}
+.nav-button.back {
+  top: 9px;
+  left: 15px;
+}
+.nav-button.close {
+  top: 6px;
+  right: 5px; 
 }
 .button {
   display: inline;
@@ -203,9 +207,6 @@ ul .close-button {
   text-decoration: none;
   margin-top: 2px;
   list-style-type: none;
-  font-family: "Oswald";
-  font-size: 20px;
-  color: white;
  }
  .results li a{
   text-decoration: none;
@@ -216,7 +217,6 @@ ul .close-button {
  .results ul{
   padding: 0px;
  }
-
  .venue-name {
   display: inline-block;
   width: 450px;
@@ -224,14 +224,11 @@ ul .close-button {
   padding-top: 15px;
   padding-left: 10px;
  }
-
  .shield {
   margin-right: .5em;
   margin-left: 40px;
   position: relative;
-
  }
-
  .shield:after {
   content: url(../img/distanceshield-list_360.png);
   display: block;
@@ -241,7 +238,6 @@ ul .close-button {
   top: -6px;
   left: -35px;
  }
-
 .star {
   margin-right: .5em;
   margin-left: 40px;
@@ -256,6 +252,9 @@ ul .close-button {
   top: -6px;
   left: -35px;
 }
+.restaurant-details .star, .restaurant-details .shield {
+  display: block;
+}
 .rating-col {
   width: 225px;
   display: inline-block;
@@ -265,6 +264,11 @@ ul .close-button {
  .restaurant-results {
   background-color: #444;
   height: 324px;
+ }
+ .speak-review {
+  display: block;
+  width: 145px;
+  background: transparent url(../img/spoken.png) 0 0 no-repeat; 
  }
 /*loader css*/
 .loader {

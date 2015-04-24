@@ -1,10 +1,9 @@
 <div ng-controller="SingleCategoryController as single">
-<div class="category-detail-header">
-<ul class="button-nav">
-	<li><a href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a></li>
-	<li><h3>{{single.currentRoute | uppercase}}</h3></li>
-	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></li>
-</ul>
+<div class="detail-header">
+<div class="detail-header">
+	<h3>{{single.currentRoute | uppercase}}</h3>
+	<a class="nav-button back" href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a>
+	<a class="nav-button close"href="#/"><img class='close-button' src="../img/close-x.png"></a>
 </div>
 <div class="results">
 	<ul>
