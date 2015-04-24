@@ -7,9 +7,9 @@
         
     	var factory = {};
       var key = 'key=AIzaSyDsMqIQw9WVNS8HJxbqz7gPkte4LNju4nw';
-      var url = 'https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x380&markers=color:red%7Clabel:%7C42.333238,-83.045748&center=42.333238,-83.045748&';
+      var url = 'https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x380&markers=color:red%7Clabel:%7C';
       factory.getStaticMap = function(location){
-        return (url + location + "&center=" + location + key);
+        return (url + location + "&center=" + location + '&' + key);
       }
       factory.getDistance = function(lat, lng){
       	var origin = new google.maps.LatLng(CategoriesFactory.testLocationLat, CategoriesFactory.testLocationLng);
