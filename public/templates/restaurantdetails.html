@@ -1,14 +1,21 @@
 <ul class="button-nav">
-	<li><a href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a></li> 
+	<li><a href="#/categories">Back</a></li> 
 	<li>Category Placeholder</li>
-	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></li></ul>
+	<li><a href="#/">Close</a></li>
+</ul>
 <div class="restaurant-results" ng-controller="RestaurantDetailsController as restaurant">
 	<div class="results-left">
 		<h3>{{restaurant.currentPlace.name}}</h3>
-		<p>{{restaurant.currentPlace.formatted_address}}</p>
-		<p>{{restaurant.details.formatted_phone_number}}</p>
-		<p>{{restaurant.currentPlace.rating}}</p>
-		<p ng-show="restaurant.details.opening_hours.open_now == true"> Open Now</p>
+		
+		<p>{{restaurant.currentReview}}</p>
+		
+		<div class="details">
+			<p>{{restaurant.currentPlace.rating}}</p>
+			<p>{{restaurant.currentPlace.formatted_address}}</p>
+			<p>{{restaurant.details.formatted_phone_number}}</p>
+			<p ng-show="restaurant.details.opening_hours.open_now == true">Open Now</p>
+			<a class="button" href="" ng-click="restaurant.speakReview()">Hear this review</a>
+		</div>
 	</div>
 	<div class="results-right">
 		<img class="map" ng-src="{{restaurant.map}}">

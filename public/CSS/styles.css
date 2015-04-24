@@ -23,20 +23,23 @@ body {
 
 .results-left {
   display: inline-block;
-  width: 40%;
-  padding-left: 10px;
-  overflow: hidden;
+  width: 460px;
+  padding: 0 10px;
+  height: 324px;
+  overflow: elipsis;
 }
-
-.results-left p {
-  word-wrap: ;
+.results-left .details {
+  float: right;
+  height: 324px;
+  width: 145px;
 }
 .results-right {
   display: inline-block;
   float: right;
-  padding-right: 30px;
+  padding: 10px;
   text-align: center;
-  width: 40%;
+  width: 300px;
+  height: 324px;
   overflow: hidden;
 }
 .container {
@@ -44,7 +47,6 @@ body {
 }
 .map {
   width: 100%;
-  padding:8px;
 }
 
 h3 {
@@ -130,6 +132,7 @@ h3 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 56px;
 }
 .button {
   display: inline;
@@ -203,7 +206,7 @@ ul .close-button {
 
  .restaurant-results {
   background-color: #444;
-  height: 320px;
+  height: 324px;
  }
 /*loader css*/
 .loader {
