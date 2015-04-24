@@ -41,9 +41,19 @@ body {
 .results-right {
   /*display: inline-block;*/
   float: right;
+  position: relative;
   padding: 10px;
   width: 300px;
   height: 324px;
+}
+.results-right:before {
+  content: "Navigate";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ebb500;
+  display: block;
+  padding: 10px;
 }
 .results-right:after {
   content: '';
@@ -279,9 +289,9 @@ ul .close-button {
   display: block;
   border-radius: 5px;
   width: 145px;
-  background: #222 url(../img/spoken.png) 0 0 no-repeat; 
+  background: #85AD4A url(../img/spoken.png) 0 -4px no-repeat; 
   width: 130px;
-  height: 55px;
+  height: 57px;
   background-size: 65px 65px;
  }
 /*loader css*/
