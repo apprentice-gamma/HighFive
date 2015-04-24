@@ -6,42 +6,47 @@
 
         
     	var factory = {};
-        factory.getDistance = function(lat, lng){
-        	var origin = new google.maps.LatLng(CategoriesFactory.testLocationLat, CategoriesFactory.testLocationLng);
-        	var destination = new google.maps.LatLng(lat, lng);
+      var key = 'key=AIzaSyDsMqIQw9WVNS8HJxbqz7gPkte4LNju4nw';
+      var url = 'https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x380&markers=color:red%7Clabel:%7C42.333238,-83.045748&center=42.333238,-83.045748&';
+      factory.getStaticMap = function(location){
+        return (url + location + "&center=" + location + key);
+      }
+      factory.getDistance = function(lat, lng){
+      	var origin = new google.maps.LatLng(CategoriesFactory.testLocationLat, CategoriesFactory.testLocationLng);
+      	var destination = new google.maps.LatLng(lat, lng);
 
-        	var service = new google.maps.DistanceMatrixService();
-        	service.getDistanceMatrix(
-			  {
-			    origins: [origin],
-			    destinations: [destination],
-			    travelMode: google.maps.TravelMode.DRIVING,
-			  }, callback);
-             var deferred = $q.defer();
-             function callback(response, status) {
-                   console.log(status);
-                    if (status == google.maps.DistanceMatrixStatus.OK) {
-                        var origins = response.originAddresses;
-                        var destinations = response.destinationAddresses;
+      	var service = new google.maps.DistanceMatrixService();
+      	service.getDistanceMatrix(
+		  {
+		    origins: [origin],
+		    destinations: [destination],
+		    travelMode: google.maps.TravelMode.DRIVING,
+		  }, callback);
+           var deferred = $q.defer();
+           function callback(response, status) {
+                 console.log(status);
+                  if (status == google.maps.DistanceMatrixStatus.OK) {
+                      var origins = response.originAddresses;
+                      var destinations = response.destinationAddresses;
 
-                        for (var i = 0; i < origins.length; i++) {
-                          var results = response.rows[i].elements;
-                          for (var j = 0; j < results.length; j++) {
-                            var element = results[j];
-                            var distance = element.distance.text;
-                            var duration = element.duration.text;
-                            var from = origins[i];
-                            var to = destinations[j];
-                          }
+                      for (var i = 0; i < origins.length; i++) {
+                        var results = response.rows[i].elements;
+                        for (var j = 0; j < results.length; j++) {
+                          var element = results[j];
+                          var distance = element.distance.text;
+                          var duration = element.duration.text;
+                          var from = origins[i];
+                          var to = destinations[j];
                         }
                       }
-                        // console.log(object.distance);
-                       deferred.resolve(results[0]);     
                     }
-                    return deferred.promise;
+                      // console.log(object.distance);
+                     deferred.resolve(results[0]);     
+                  }
+                  return deferred.promise;
 
-        };
-        factory.getPlaceDetails = function (id){
+      };
+      factory.getPlaceDetails = function (id){
         var map = new google.maps.Map(document.getElementById('map'));
 
         var request = {
@@ -56,9 +61,9 @@
             deferred.resolve(place);
           }      
       });
-       return deferred.promise;
-  }
-    
-    	return factory;
+      return deferred.promise;
+      }
+  
+  	return factory;
     }
 })();

@@ -1,6 +1,7 @@
 angular.module('HighFive').controller('RestaurantDetailsController', RestaurantDetailsController);
 function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeParams){
 	var vm = this;
+	vm.location = '';
 	vm.details = {}
 	vm.currentPlace = {};
 	vm.categories = CategoriesFactory.categories;
@@ -22,12 +23,14 @@ function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeP
  	vm.categoriesObject[vm.currentRoute].forEach(function(object){
  		if (object.place_id === vm.currentId){
  			vm.currentPlace = object;
+ 			vm.location = vm.currentPlace.geometry.location.k + ',' + vm.currentPlace.geometry.location.D;
  		}
  	});
  	DistanceFactory.getPlaceDetails(vm.currentId).then(function(data){
 			vm.details = data;
 			CategoriesFactory.speak("Thoughts from a customer." + "-" + vm.details.reviews[0].text);
 		});
+ 	vm.map = DistanceFactory.getStaticMap(vm.location);
 	vm.test = "I'm the restuarant you want!";
 	console.log('I\'m the restuarant you want!');
 	console.log(vm.currentPlace);
