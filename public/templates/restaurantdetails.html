@@ -1,5 +1,12 @@
 <div class="results" ng-controller="RestaurantDetailsController as restaurant">
-	<h3>Hello World</h3>
-	<p>{{restaurant.currentRoute}}</p>
-	<p>{{restaurant.test}}</p>
+	<h3>{{restaurant.currentPlace.name}}</h3>
+	<div class="results-left">
+		<p>{{restaurant.currentPlace.formatted_address}}</p>
+		<p>{{restaurant.details.formatted_phone_number}}</p>
+		<p>{{restaurant.currentPlace.rating}}</p>
+		<p ng-show="restaurant.details.opening_hours.open_now == true"> Open Now</p>
+	</div>
+	<div class="results-right">
+		<img class="map" src="{{restaurant.map}}">
+	</div>
 </div>

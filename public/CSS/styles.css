@@ -21,6 +21,21 @@ body {
   margin-top: 55px;
 }
 
+.results-left {
+  display: inline-block;
+  margin-left: 10px;
+}
+.results-right {
+  display: inline-block;
+  float: right;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.map {
+  width: 75%;
+}
+
 h3 {
   text-align: center;
 }
