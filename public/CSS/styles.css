@@ -84,7 +84,7 @@ h3 {
 .cat-main-logo {
 	position: relative;
   top: -8px;
-  left: 347px;
+  left: 300px;
 	width: 12%;
 	height: 12%;
 	padding-top: 25px;
@@ -135,6 +135,12 @@ h3 {
   height: 44px;
   padding-left: 0;
   margin-top: 0;
+}
+
+.close-button.category {
+  position:relative;
+  left: 757px;
+  bottom: 40px;
 }
 .back-image {
 	width: 36px;

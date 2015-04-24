@@ -2,7 +2,7 @@
 <div ng-controller="RestaurantDetailsController as restaurant">
 	<div class="detail-header">
 	<h3>{{restaurant.currentRoute | uppercase}}</h3>
-	<a class="nav-button back" href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a>
+	<a class="nav-button back" href="#/categories/{{restaurant.currentRoute}}"><img class='back-image' src="../img/back-arrow.png"></a>
 	<a class="nav-button close"href="#/"><img class='close-button' src="../img/close-x.png"></a>
 	</div>
 	<div class="restaurant-results">
