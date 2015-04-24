@@ -23,13 +23,19 @@ body {
 
 .results-left {
   display: inline-block;
-  margin-left: 10px;
+  width: 40%;
+  padding-left: 30px;
+}
+
+.results-left p {
+  word-wrap: ;
 }
 .results-right {
   display: inline-block;
   float: right;
-  margin-left: 10px;
+  padding-right: 30px;
   text-align: center;
+  width: 40%;
 }
 
 .map {
