@@ -35,7 +35,7 @@ function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeP
 	console.log('I\'m the restuarant you want!');
 	console.log(vm.currentPlace);
 	console.log(vm.details);
-	CategoriesFactory.speak("testing");
+	
 	
 
 }

@@ -18,7 +18,7 @@
         factory.speak = function (text){
             var msg = new SpeechSynthesisUtterance();
             msg.text = text;
-            msg.rate = 1;
+            msg.rate = .1;
             speechSynthesis.speak(msg);
         };
 
