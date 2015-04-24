@@ -23,28 +23,34 @@ body {
 
 .results-left {
   display: inline-block;
-  width: 40%;
-  padding-left: 10px;
-  overflow: hidden;
+  width: 300px;
+  padding: 0 15px;
+  height: 324px;
+  font-size: 21px;
+  color: white;
 }
-
-.results-left p {
-  word-wrap: ;
+.restaurant-details {
+  display: inline-block;
+  height: 324px;
+  width: 145px;
 }
 .results-right {
   display: inline-block;
   float: right;
-  padding-right: 30px;
+  padding: 10px;
   text-align: center;
-  width: 40%;
+  width: 300px;
+  height: 324px;
   overflow: hidden;
+}
+.restaurant-results h3 {
+  text-align: left;
 }
 .container {
   clear:both;
 }
 .map {
   width: 100%;
-  padding:8px;
 }
 
 h3 {
@@ -114,8 +120,8 @@ h3 {
 	background-repeat: no-repeat;
 }
 .close-button {
-	width: 6%;
-  height: 6%;
+	width: 44px;
+  height: 44px;
   padding-left: 0;
   margin-top: 0;
   display: inline;
@@ -123,8 +129,8 @@ h3 {
   float:right;
 }
 .back-image {
-	width: 5%;
-	height: 5%;
+	width: 36px;
+	height: 36px;
 	padding-top: 5px;
 	padding-left: 5px;
 }
@@ -132,6 +138,7 @@ h3 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 56px;
 }
 .button-nav h3 {
   display: inline;
@@ -257,7 +264,7 @@ ul .close-button {
 }
  .restaurant-results {
   background-color: #444;
-  height: 320px;
+  height: 324px;
  }
 /*loader css*/
 .loader {

@@ -27,22 +27,25 @@ function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeP
  			vm.location = vm.currentPlace.geometry.location.k + ',' + vm.currentPlace.geometry.location.D;
  		}
  	});
+ 	vm.map = DistanceFactory.getStaticMap(vm.location);
+ 	
  	DistanceFactory.getPlaceDetails(vm.currentId).then(function(data){
 			vm.details = data;
 			for (var i = 0; i < vm.details.reviews.length; i++){
 				if (Number(vm.details.reviews[i].rating) >= 4) {
 					vm.currentReview = vm.details.reviews[i].text;
-					console.log(vm.currentReview)
-					return CategoriesFactory.speak("Thoughts from a customer." + "-" + vm.details.reviews[i].text);
+					console.log(vm.currentReview);
 				}
 			}
-			
 		});
- 	vm.map = DistanceFactory.getStaticMap(vm.location);
-	vm.test = "I'm the restuarant you want!";
-	console.log('I\'m the restuarant you want!');
+
+ 	vm.speakReview = function(){			
+		return CategoriesFactory.speak( vm.currentPlace.name + "." + vm.currentPlace.rating + "stars-" + vm.currentReview);
+ 	};
+ 	
 	console.log(vm.currentPlace);
 	console.log(vm.details);
+	console.log(vm.currentReview);
 	
 	
 

@@ -1,14 +1,21 @@
+<div class="category-detail-header">
 <ul class="button-nav">
-	<li><a href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a></li> 
-	<li>Category Placeholder</li>
-	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></li></ul>
+	<li><a href="#/categories"><img class='back-image' src="../img/back-arrow.png"></a></li>
+	<li><h3>{{single.currentRoute | uppercase}}</h3></li>
+	<li><a href="#/"><img class='close-button' src="../img/close-x.png"></a></li>
+</ul>
+</div>
 <div class="restaurant-results" ng-controller="RestaurantDetailsController as restaurant">
 	<div class="results-left">
-		<h3>{{restaurant.currentPlace.name}}</h3>
+		<h3>{{restaurant.details.name}}</h3>
+		{{restaurant.currentReview | limitTo: 230}}...
+	</div>
+	<div class="restaurant-details">
+		<p>{{restaurant.currentPlace.rating}}</p>
 		<p>{{restaurant.currentPlace.formatted_address}}</p>
 		<p>{{restaurant.details.formatted_phone_number}}</p>
-		<p>{{restaurant.currentPlace.rating}}</p>
-		<p ng-show="restaurant.details.opening_hours.open_now == true"> Open Now</p>
+		<p ng-show="restaurant.details.opening_hours.open_now == true">Open Now</p>
+		<a class="button" href="" ng-click="restaurant.speakReview()">Hear this review</a>
 	</div>
 	<div class="results-right">
 		<img class="map" ng-src="{{restaurant.map}}">
