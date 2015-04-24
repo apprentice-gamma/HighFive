@@ -28,7 +28,13 @@ function RestaurantDetailsController(DistanceFactory, CategoriesFactory, $routeP
  	});
  	DistanceFactory.getPlaceDetails(vm.currentId).then(function(data){
 			vm.details = data;
-			CategoriesFactory.speak("Thoughts from a customer." + "-" + vm.details.reviews[0].text);
+			for (var i = 0; i < vm.details.reviews.length; i++){
+				if (Number(vm.details.reviews[i].rating) >= 4) {
+					console.log(vm.details.reviews[i])
+					return CategoriesFactory.speak("Thoughts from a customer." + "-" + vm.details.reviews[i].text);
+				}
+			}
+			
 		});
  	vm.map = DistanceFactory.getStaticMap(vm.location);
 	vm.test = "I'm the restuarant you want!";
