@@ -49,6 +49,8 @@ body {
 
 h3 {
   text-align: center;
+  font-family: "Oswald";
+  font-size: 24px;
 }
 
 .large-address {
@@ -112,8 +114,8 @@ h3 {
 	background-repeat: no-repeat;
 }
 .close-button {
-	width: 5%;
-  height: 5%;
+	width: 6%;
+  height: 6%;
   padding-left: 0;
   margin-top: 0;
   display: inline;
@@ -130,6 +132,15 @@ h3 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.button-nav h3 {
+  display: inline;
+  position: relative;
+  left: 290px;
+  bottom: 6px;
+}
+.button-nav li {
+  display: inline;
 }
 .button {
   display: inline;
@@ -163,9 +174,7 @@ h3 {
   text-align: center;
   padding: 0px;
 }
-.button-nav li {
-	display: inline;
-}
+
 ul .close-button {
 	padding-left: 0%;
 	margin-bottom: 0;
@@ -183,24 +192,69 @@ ul .close-button {
  .results li {
   background-color: #444;
   width: 800px;
-  height: 51px;
+  height: 59px;
   text-decoration: none;
   margin-top: 2px;
   list-style-type: none;
-  font-family: "Helvetica Neue";
-  font-size: 22px;
-  font-color: white;
+  font-family: "Oswald";
+  font-size: 20px;
+  color: white;
  }
  .results li a{
   text-decoration: none;
   list-style-type: none;
-  padding-right: 0px;
+  color:white;
  }
 
  .results ul{
   padding: 0px;
  }
 
+ .venue-name {
+  display: inline-block;
+  width: 450px;
+  height: 59px;
+  padding-top: 15px;
+  padding-left: 10px;
+ }
+
+ .shield {
+  margin-right: .5em;
+  margin-left: 40px;
+  position: relative;
+
+ }
+
+ .shield:after {
+  content: url(../img/distanceshield-list_360.png);
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -6px;
+  left: -35px;
+ }
+
+.star {
+  margin-right: .5em;
+  margin-left: 40px;
+  position: relative;
+}
+.star:after{
+  content: url(../img/ratingstar-list_360.png);
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -6px;
+  left: -35px;
+}
+.rating-col {
+  width: 225px;
+  display: inline-block;
+  padding-top: 15px;
+  padding-left: 10px;
+}
  .restaurant-results {
   background-color: #444;
   height: 320px;
