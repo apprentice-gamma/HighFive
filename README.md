@@ -1,4 +1,4 @@
-![HighFive](public/img/highfive-logo-github.png)
+![HighFive](https://github.com/apprentice-gamma/HighFive/blob/master/public/img/highfive-logo-github.png)
 # HighFive
 
 ###Quick! Where are we eating?
