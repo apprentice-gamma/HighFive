@@ -1,4 +1,4 @@
-![HighFive](/public/img/highfive-logo-github.png)
+![HighFive](http://apprentice-gamma.github.io/HighFive/public/img/highfive-logo-github.png)
 # HighFive
 
 ###The Top Five Places to Eat in Five Categories.
